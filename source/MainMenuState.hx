@@ -33,12 +33,8 @@ class MainMenuState extends MusicBeatState
 	private var camAchievement:FlxCamera;
 	
 	var optionShit:Array<String> = [
-		'story_mode',
-		'freeplay',
-		#if windows 'mods', #end
-		#if ACHIEVEMENTS_ALLOWED 'awards', #end
+		'pajero',
 		'credits',
-		#if !switch 'donate', #end
 		'options'
 	];
 
@@ -208,9 +204,9 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
-				if (optionShit[curSelected] == 'donate')
+				if (optionShit[curSelected] == 'pajero')
 				{
-					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
+					FlxG.sound.play(Paths.sound('masturbasuceso'));
 				}
 				else
 				{
